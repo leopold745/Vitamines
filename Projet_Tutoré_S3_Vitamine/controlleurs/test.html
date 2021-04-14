@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercice 8</title>
+	</head>
+
+	<body>
+		<script>
+			a1 = {nom:"prunes", prix:4.5};
+			a2 = {nom:"lait", prix:2.5};
+			a3 = {nom:"fromage", prix:8};
+			panier = {articles:[a1, a2]};
+			
+			// Q1: ajoute l'article a3 dans le panier.
+			panier.articles.push(a3);
+			
+			// Q2: Dans l'objet panier, dÃ©finis la mÃ©thode afficher(). Elle doit afficher sur la page les noms et les prix de chaque article.
+			panier.afficher = function() {
+				var html = "";
+				for(article of panier.articles) {
+					html += article.nom + " ... " + article.prix + "<br>";
+				}
+				document.write(html);
+			}
+			
+			document.write("<strong>Contenu du panier :</strong></br>");
+			panier.afficher();
+			
+			// Q3: DÃ©finis la mÃ©thode articleLePlusCher() dans l'objet panier. Elle doit retourner l'article le plus cher.
+			
+			panier.articleLePlusCher = function() {
+				var prixMax = this.articles[0].prix;
+				var iMax = 0;
+				for(var i = 1; i < this.articles.length; i++) {
+					if (this.articles[i].prix > prixMax) {
+						prixMax = this.articles[i].prix;
+						iMax = i;
+					}
+				}
+				return this.articles[iMax];
+			}
+			
+			document.write("</br><strong>Nom de l'article le plus cher du panier :</strong></br>");
+			document.write(panier.articleLePlusCher().nom);
+			document.write("</br>");
+			
+			// Q4: ajoute dans le panier du chocolat qui coÃ»te 8.3.
+			document.write("</br><strong>On ajoute du chocolat dans le panier...</strong></br>");
+			panier.articles.push({nom:"chocolat",prix:8.3});
+			
+			
+			// Q5: VÃ©rifie que c'est maintenant l'article le plus cher.
+			document.write("</br><strong>Nom de l'article le plus cher du panier :</strong></br>");
+			document.write(panier.articleLePlusCher().nom);
+			
+		</script>
+	</body>
+	
+</html>

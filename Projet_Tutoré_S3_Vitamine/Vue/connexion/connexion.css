@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+@keyframes text{
+    0%{
+        margin-left : -70px;
+    }
+}
+
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20vh;
+    background : linear-gradient(to left,#ba7453,#d1a984);
+    font-family: "Poppins", sans-serif;
+}
+.logo {
+    display : flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    padding-left :50px;
+    margin : 15px;
+}
+.imglogo{
+    width:75px;
+}
+/* Formulaire d'inscription */
+.fl{
+    float: left;
+}
+.warpper{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.main{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: rgba(209, 169, 132, 0.63);
+    margin: 50px 35%;
+    border-radius: 20px 20px 30px 30px;
+}
+.head{
+    width: 100%;
+    background-color: #ba7453;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+}
+.head p{
+    line-height: 40px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+.form{
+    width: 100%;
+}
+.name{
+    font-size: 16px;
+    color: #fff;
+    margin: 15px 0 0 5%;
+    font-family: "Poppins", sans-serif;
+}
+.name-inp{
+    width: 90%;
+    height: 30px;
+    margin: 5px 0 0 5%;
+    font-size: 16px;
+    padding: 2px;
+    border: 1px solid #ba7453;
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.name-inp:hover{
+    background-color: #ba7453;
+}
+.pass{
+    margin: 5px 0 0 5%;
+    height: 30px;
+    width: 41%;
+    padding: 2px;
+    background-color: #fff;
+    border: 1px solid #ba7453;
+}
+.pass:hover{
+    background-color: #ba7453;
+}
+.boutonsub{
+    padding-bottom:15px;
+}
+.sub{
+    width: 90%;
+    margin: 15px 0 0 5%;
+    font-size: 16px;
+    height: 40px;
+    background-color: #ba7453;
+    border: 1px solid #d1a984;
+    color: #fff;
+}
+.sub:hover{
+    background-color: #d1a984;
+    color: #fff;
+}

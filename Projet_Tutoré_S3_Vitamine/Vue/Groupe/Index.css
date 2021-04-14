@@ -1,0 +1,141 @@
+
+@keyframes text{
+    0%{
+        margin-left : -70px;
+    }
+}
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(../img/background.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+th,td{
+color :Cornsilk;
+}
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: rgba(186,116,83,0.6);
+
+  color: white;
+}
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+  background-color:rgba(186,116,83,0.6);
+
+  color: white;
+}
+
+.tete{
+ background-color: rgba(186,116,83,0.8);
+
+
+}
+.pop{
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color :rgb(255, 205, 131) !important;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5) !important;
+}
+.titre2{
+font-size: 50px !important;
+    font-weight: bold !important;
+    color :White !important;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5) !important;
+
+}
+
+.titre3{
+font-size: 25px !important;
+    font-weight: bold !important;
+    color :rgb(255, 205, 131)  !important;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5) !important;
+
+
+}
+.div-titre{
+width : 100%;
+display : flex;
+justify-content : center;
+align-items: center;
+}
+
+
+.colorb{
+background-color: #ba7453 !important;
+border : 2px solid #ba7453 !important;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20vh;
+    background : linear-gradient(to left,#ba7453,#d1a984);
+    font-family: "Poppins", sans-serif;
+}
+.logo {
+    display : flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    padding-left :50px;
+    margin : 15px;
+}
+.imglogo{
+    width:75px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    width: 30%;
+    margin-bottom: 0px;
+    padding-right : 50px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    margin-right : 25px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+    .text{
+        font-size:20px;
+    }
+}

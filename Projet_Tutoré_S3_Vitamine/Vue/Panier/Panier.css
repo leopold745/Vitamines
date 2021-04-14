@@ -1,0 +1,133 @@
+/*début navbar*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20vh;
+    background : linear-gradient(to left,#ba7453,#d1a984);
+    font-family: "Poppins", sans-serif;
+  }
+  .logo {
+    display : flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    padding-left :50px;
+    margin : 15px;
+  }
+  .imglogo{
+    width:75px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .burger {
+    display: none;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background : linear-gradient(to left,#ba7453,#d1a984);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+  }
+  
+  .nav-active {
+        transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .toggle .line2 {
+    opacity: 0;
+  }
+  
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  /*fin navbar*/
+  .couleur{
+    background : linear-gradient(to left,#ba7453,#d1a984);
+    color :white!important;
+  }
+  .planA{
+    background-color:	#FFFAFA;
+    -webkit-box-shadow: 3px 3px 5px 2px #ccc;
+    -moz-box-shadow:    3px 3px 5px 2px #ccc;
+    box-shadow:         3px 3px 5px 2px #ccc;
+  }

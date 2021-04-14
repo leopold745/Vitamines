@@ -1,0 +1,252 @@
+/*début navbar*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20vh;
+  background : linear-gradient(to left,#ba7453,#d1a984);
+  font-family: "Poppins", sans-serif;
+}
+.logo {
+  display : flex;
+  justify-content: space-around;
+  align-items:flex-end;
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  padding-left :50px;
+  margin : 15px;
+}
+.imglogo{
+  width:75px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+      width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+      overflow-x: hidden;
+  }
+  
+  .nav-links {
+      position: fixed;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: #5D4954;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+  
+  .nav-links li {
+      opacity: 0;
+  }
+  
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+}
+
+.nav-active {
+      transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/*fin navbar*/
+
+/*début catalogue*/
+.filtre{
+  display:flex!important;
+  justify-content: space-evenly!important;
+  align-items: center!important;
+}
+.hover-1 img {
+    width: 105%;
+    height:auto;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+  }
+  .numberPanier{
+    margin-top:10px!important;
+  }
+  .boutonPanier{
+    padding-bottom : 10px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:10px!important;
+  }
+  .hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+  }
+  .hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+  }
+  .hover-1:hover .hover-1-content {
+    bottom: 2rem;
+  }
+  .hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+  }
+  .hover-1:hover img {
+    left: 0;
+  }
+  .hover-1:hover .hover-overlay {
+    opacity: 0;
+  }
+.hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+  }
+  .hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+  }
+  .hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  .hover-content {
+    position: relative;
+    z-index: 99;
+  }
+  .hover-3::after {
+    content: '';
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    border: 1px solid #fff;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 90;
+    transition: all 0.3s;
+    transform: scale(1.1);
+    opacity: 0;
+    display: block;
+    opacity: 0;
+  }
+  .hover-3-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 99;
+  }
+  .hover-3-description {
+    opacity: 0;
+    transform: scale(1.3);
+    transition: all 0.3s;
+  }
+  .hover-3 img {
+    width: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hover-3 .hover-overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .hover-3:hover img {
+    width: 100%;
+  }
+  .hover-3:hover::after {
+    opacity: 1;
+    transform: none;
+  }
+  .hover-3:hover .hover-3-description {
+    opacity: 1;
+    transform: none;
+  }
+  .hover-3:hover .hover-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
